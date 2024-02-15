@@ -4,7 +4,7 @@ SELECT DISTINCT ship_city, ship_country
 FROM orders
 WHERE ship_city ILIKE '%burg';
 
--- 2. SELECT order_id, customer_id, freight, ship_country
+-- 2. из таблицы orders идентификатор заказа, идентификатор заказчика, вес и страну отгрузки. Заказ отгружен в страны, начинающиеся на 'P'. Результат отсортирован по весу (по убыванию). Вывести первые 10 записей.
 FROM orders
 WHERE ship_country ILIKE 'P%'
 ORDER BY freight DESC
